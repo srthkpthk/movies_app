@@ -6,7 +6,6 @@ import 'package:moviesapp/data/model/MovieResponse/movie_response.dart';
 import 'package:moviesapp/data/repository/AppRepository.dart';
 
 part 'movie_event.dart';
-
 part 'movie_state.dart';
 
 class MovieBloc extends Bloc<MovieEvent, MovieState> {

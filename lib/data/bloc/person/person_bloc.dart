@@ -6,7 +6,6 @@ import 'package:moviesapp/data/model/PersonResponse/person_response.dart';
 import 'package:moviesapp/data/repository/AppRepository.dart';
 
 part 'person_event.dart';
-
 part 'person_state.dart';
 
 class PersonBloc extends Bloc<PersonEvent, PersonState> {

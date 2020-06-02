@@ -11,7 +11,7 @@ class App extends StatelessWidget {
       title: 'Movie Catalog',
       theme: ThemeData(
           brightness: Brightness.light,
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.red,
           fontFamily: 'ProductSans'),
       darkTheme: ThemeData(
           brightness: Brightness.dark,

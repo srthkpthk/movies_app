@@ -4,8 +4,11 @@ part of 'now_playing_bloc.dart';
 abstract class NowPlayingState {}
 
 class InitialNowPlayingState extends NowPlayingState {}
+
 class NowPlayingLoading extends NowPlayingState {}
+
 class NowPlayingLoadError extends NowPlayingState {}
+
 class NowPlayingLoaded extends NowPlayingState {
   MovieResponse response;
 

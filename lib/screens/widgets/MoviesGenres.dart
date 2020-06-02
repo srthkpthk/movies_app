@@ -82,7 +82,7 @@ class _GenresScreenState extends State<GenresScreen> {
       );
     } else
       return Padding(
-        padding: const EdgeInsets.only(top: 10,left: 10),
+        padding: const EdgeInsets.only(top: 10, left: 10),
         child: GenresList(
           genres: genres,
         ),

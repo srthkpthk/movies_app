@@ -6,7 +6,6 @@ import 'package:moviesapp/data/model/GenreResponse/genre_response.dart';
 import 'package:moviesapp/data/repository/AppRepository.dart';
 
 part 'genre_event.dart';
-
 part 'genre_state.dart';
 
 class GenreBloc extends Bloc<GenreEvent, GenreState> {

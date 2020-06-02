@@ -5,11 +5,7 @@ class Video {
   final String site;
   final String type;
 
-  Video(this.id,
-         this.key,
-         this.name,
-         this.site,
-         this.type);
+  Video(this.id, this.key, this.name, this.site, this.type);
 
   Video.fromJson(Map<String, dynamic> json)
       : id = json["id"],

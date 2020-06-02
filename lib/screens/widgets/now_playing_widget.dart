@@ -4,10 +4,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moviesapp/data/bloc/now_playing/now_playing_bloc.dart';
 import 'package:moviesapp/data/model/MovieResponse/movie.dart';
 import 'package:moviesapp/data/model/MovieResponse/movie_response.dart';
+import 'package:moviesapp/screens/movie_detail_screen.dart';
 import 'package:moviesapp/screens/widgets/common/errorWidget.dart';
 import 'package:moviesapp/screens/widgets/common/loadingWidget.dart';
 import 'package:page_indicator/page_indicator.dart';
-import 'package:moviesapp/screens/movie_detail_screen.dart';
 
 class NowPlaying extends StatefulWidget {
   @override
@@ -103,7 +103,11 @@ class _NowPlayingState extends State<NowPlaying> {
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => MovieDetailScreen(movies[index])));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MovieDetailScreen(movies[index])));
                   },
                   child: Stack(
                     children: <Widget>[

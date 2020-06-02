@@ -6,7 +6,6 @@ import 'package:moviesapp/data/model/CastResponse/cast_response.dart';
 import 'package:moviesapp/data/repository/AppRepository.dart';
 
 part 'cast_event.dart';
-
 part 'cast_state.dart';
 
 class CastBloc extends Bloc<CastEvent, CastState> {

@@ -6,7 +6,6 @@ import 'package:moviesapp/data/model/MovieResponse/movie_response.dart';
 import 'package:moviesapp/data/repository/AppRepository.dart';
 
 part 'similar_movies_event.dart';
-
 part 'similar_movies_state.dart';
 
 class SimilarMoviesBloc extends Bloc<SimilarMoviesEvent, SimilarMoviesState> {

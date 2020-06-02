@@ -5,11 +5,7 @@ class Person {
   final String profileImg;
   final String known;
 
-  Person(this.id,
-         this.popularity,
-         this.name,
-         this.profileImg,
-         this.known);
+  Person(this.id, this.popularity, this.name, this.profileImg, this.known);
 
   Person.fromJson(Map<String, dynamic> json)
       : id = json["id"],
