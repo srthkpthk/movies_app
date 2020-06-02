@@ -1,10 +1,10 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:moviesapp/data/bloc/movie/movie_bloc.dart';
 import 'package:moviesapp/data/model/MovieResponse/movie.dart';
 import 'package:moviesapp/data/model/MovieResponse/movie_response.dart';
+import 'package:moviesapp/screens/movie_detail_screen.dart';
 import 'package:moviesapp/screens/widgets/common/loadingWidget.dart';
 
 import 'common/errorWidget.dart';
@@ -92,85 +92,82 @@ class _BestMoviesState extends State<BestMovies> {
             return Padding(
               padding: EdgeInsets.only(top: 10.0, bottom: 10.0, right: 15.0),
               child: GestureDetector(
-//                onTap: () {
-//                  Navigator.push(
-//                    context,
-//                    MaterialPageRoute(
-//                      builder: (context) =>
-//                     MovieDetailScreen(movie: movies[index]),
-//                    ),
-//                  );
-//                },
-                //todo
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MovieDetailScreen(movies[index]),
+                    ),
+                  );
+                },
                 child: Column(
                   children: <Widget>[
                     movies[index].poster == null
                         ? Container(
-                      width: 120.0,
-                      height: 180.0,
-                      decoration: new BoxDecoration(
-                        borderRadius:
-                        BorderRadius.all(Radius.circular(2.0)),
-                        shape: BoxShape.rectangle,
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            EvaIcons.filmOutline,
-                            color: Colors.white,
-                            size: 60,
-                          )
-                        ],
-                      ),
-                    )
-                        : Stack(
-                      children: [
-                        Container(
                             width: 120.0,
                             height: 180.0,
                             decoration: new BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(2.0)),
                               shape: BoxShape.rectangle,
-                              image: new DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: NetworkImage(
-                                      "https://image.tmdb.org/t/p/w200/" +
-                                          movies[index].poster)),
-                            )),
-                        Padding(
-                          padding:
-                          const EdgeInsets.only(left: 10, top: 10),
-                          child: Row(
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  EvaIcons.filmOutline,
+                                  color: Colors.white,
+                                  size: 60,
+                                )
+                              ],
+                            ),
+                          )
+                        : Stack(
                             children: [
-                              Text(
-                                movies[index]
-                                    .rating
-                                    .toString()
-                                    .substring(0, 1)
-                                    .toString(),
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.0,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                movies[index]
-                                    .rating
-                                    .toString()
-                                    .substring(1)
-                                    .toString(),
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.bold),
+                              Container(
+                                  width: 120.0,
+                                  height: 180.0,
+                                  decoration: new BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15),
+                                    shape: BoxShape.rectangle,
+                                    image: new DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: NetworkImage(
+                                            "https://image.tmdb.org/t/p/w200/" +
+                                                movies[index].poster)),
+                                  )),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 10, top: 10),
+                                child: Row(
+                                  children: [
+                                    Text(
+                                      movies[index]
+                                          .rating
+                                          .toString()
+                                          .substring(0, 1)
+                                          .toString(),
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      movies[index]
+                                          .rating
+                                          .toString()
+                                          .substring(1)
+                                          .toString(),
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 15.0,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
-                        ),
-                      ],
-                    ),
                     SizedBox(
                       height: 10.0,
                     ),

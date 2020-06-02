@@ -137,6 +137,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.14.0+3"
+  http:
+    dependency: transitive
+    description:
+      name: http
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.12.1"
   http_parser:
     dependency: transitive
     description:
@@ -151,6 +158,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.12.6"
+  meet_network_image:
+    dependency: "direct main"
+    description:
+      name: meet_network_image
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
   meta:
     dependency: transitive
     description:
@@ -186,6 +200,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+  pedantic:
+    dependency: transitive
+    description:
+      name: pedantic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.9.0"
   provider:
     dependency: transitive
     description:
@@ -281,7 +302,7 @@ packages:
       name: youtube_player_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "7.0.0+2"
+    version: "7.0.0+3"
 sdks:
   dart: ">=2.7.0 <3.0.0"
   flutter: ">=1.16.0 <2.0.0"

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moviesapp/data/bloc/movies_by_genre/movies_by_genre_bloc.dart';
 import 'package:moviesapp/data/model/MovieResponse/movie.dart';
 import 'package:moviesapp/data/model/MovieResponse/movie_response.dart';
+import 'package:moviesapp/screens/movie_detail_screen.dart';
 import 'package:moviesapp/screens/widgets/common/loadingWidget.dart';
 
 import 'common/errorWidget.dart';
@@ -99,17 +100,14 @@ class _GenreMoviesState extends State<GenreMovies> {
             return Padding(
               padding: EdgeInsets.only(top: 10.0, bottom: 10.0, right: 15.0),
               child: GestureDetector(
-//                onTap: () {
-//                  Navigator.push(
-//                    context,
-//                    MaterialPageRoute(
-//                      builder: (context) =>
-//                     MovieDetailScreen(movie: movies[index]),
-//                    ),
-//                  );
-//                },
-                //todo
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MovieDetailScreen(movies[index]),
+                    ),
+                  );
+                },
                 child: Column(
                   children: <Widget>[
                     movies[index].poster == null

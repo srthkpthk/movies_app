@@ -7,6 +7,7 @@ import 'package:moviesapp/data/model/MovieResponse/movie_response.dart';
 import 'package:moviesapp/screens/widgets/common/errorWidget.dart';
 import 'package:moviesapp/screens/widgets/common/loadingWidget.dart';
 import 'package:page_indicator/page_indicator.dart';
+import 'package:moviesapp/screens/movie_detail_screen.dart';
 
 class NowPlaying extends StatefulWidget {
   @override
@@ -101,7 +102,9 @@ class _NowPlayingState extends State<NowPlaying> {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => MovieDetailScreen(movies[index])));
+                  },
                   child: Stack(
                     children: <Widget>[
                       Hero(
